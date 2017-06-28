@@ -2,6 +2,7 @@
   "name": "social-media-clone",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://squaredsee.github.io/social-media-clone",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -9,7 +10,6 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.1"
   },
-  "homepage" : "http://squaredsee.github.io/social-media-clone",
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
