@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
+import PostListContainer from '../containers/PostListContainer';
 
 const App = () => (
   <div id="app" style={{ borderStyle: 'solid' }}>
@@ -9,8 +10,9 @@ const App = () => (
     <div id="pagewrapper">
       <Switch>
         <Route exact path="/" render={() => <div>home</div>} />
-        <Route path="/post/:id" render={({ match }) => <div>{`Post ID: ${match.params.id}`}</div>} />
-        <Route exact path="*" render={() => <div>404</div>} />
+        <Route path="/post" component={PostListContainer} />
+        {/* <Route path="/post/:id" render={({ match }) => <div>{`Post ID: ${match.params.id}`}</div>} />
+        <Route exact path="*" render={() => <div>404</div>} /> */}
       </Switch>
     </div>
   </div>

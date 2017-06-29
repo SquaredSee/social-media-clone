@@ -1,12 +1,18 @@
 import React from 'react';
+import promiseMiddleware from 'redux-promise';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import reducer from './reducers';
 
-const store = createStore(reducer);
+// Configure middleware with redux-promise for AJAX requests
+const createStoreWithMiddleware = applyMiddleware(
+  promiseMiddleware,
+)(createStore);
+
+const store = createStoreWithMiddleware(reducer);
 
 render(
   <Provider store={store}>
