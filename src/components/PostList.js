@@ -13,7 +13,7 @@ class PostList extends Component {
       return <div><h1>Posts</h1><h3>Loading...</h3></div>;
     }
     else if (error) {
-      return <div>Error: {error.message}</div>;
+      return <div>Error: {error}</div>;
     }
 
     return <div>{foo}</div>;

@@ -17,7 +17,7 @@ export default function (state = INITIAL_STATE, action) {
     }
     case 'GET_POSTS_FAILURE': {
       const error = action.payload || { message: action.payload.message };
-      return { ...state, testData: { foo: '', error, loading: false } };
+      return { ...state, testData: { foo: '', error: error.message, loading: false } };
     }
     default: {
       return state;

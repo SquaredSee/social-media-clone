@@ -22,7 +22,7 @@ export function getPostsSuccess(posts) {
 
 export function getPostsFailure(error) {
   return {
-    type: 'FETCH_POSTS_FAILURE',
+    type: 'GET_POSTS_FAILURE',
     payload: error,
   };
 }

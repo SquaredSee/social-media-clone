@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(getPosts()).then((response) => {
         !response.error
         ? dispatch(getPostsSuccess(response.payload.data))
-        : dispatch(getPostsFailure(response.payload.data));
+        : dispatch(getPostsFailure(response.payload));
       });
     },
   };
