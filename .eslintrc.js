@@ -10,6 +10,7 @@ module.exports = {
   ],
   "rules": {
     "brace-style": [1, "stroustrup"],
+    "no-console": [0],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   }
 };
