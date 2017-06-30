@@ -9,13 +9,38 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-// const router = express.Router();
-app.get('/api', (req, res) => {
-  res.json({ message: 'api root' });
+const testPosts = [
+  {
+    title: 'Title 1',
+    content: 'This is the content of post 1',
+    authorName: 'foo bar',
+    authorUsername: 'foo.bar',
+    id: 1,
+  },
+  {
+    title: 'Title 2',
+    content: 'This is the content of post 2',
+    authorName: 'MEEEE',
+    authorUsername: 'MEEEE',
+    id: 2,
+  },
+  {
+    title: 'Title 3',
+    content: 'This is the content of post 3',
+    authorName: 'RANDOM DUDE',
+    authorUsername: 'IDKLOL',
+    id: 3,
+  },
+];
+
+
+const router = express.Router();
+router.get('/posts', (req, res) => {
+  res.json(testPosts);
 });
 
 // all of our routes will be prefixed with /api
-// app.use('/api', router);
+app.use('/api', router);
 
 const port = process.env.PORT || 7000;
 

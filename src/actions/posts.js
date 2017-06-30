@@ -3,7 +3,7 @@ import axios from 'axios';
 export function getAllPosts() {
   const request = axios({
     method: 'get',
-    url: '/api',
+    url: '/api/posts',
     headers: [],
   });
 
