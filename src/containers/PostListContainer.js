@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getPosts, getPostsSuccess, getPostsFailure } from '../actions/posts';
+import { getAllPosts, getAllPostsSuccess, getAllPostsFailure } from '../actions/posts';
 import PostList from '../components/PostList';
 
 
@@ -12,10 +12,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getPosts: () => {
-      dispatch(getPosts()).then((response) => {
+      dispatch(getAllPosts()).then((response) => {
         !response.error
-        ? dispatch(getPostsSuccess(response.payload.data))
-        : dispatch(getPostsFailure(response.payload));
+        ? dispatch(getAllPostsSuccess(response.payload.data))
+        : dispatch(getAllPostsFailure(response.payload));
       });
     },
   };

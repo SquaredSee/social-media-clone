@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export function getPosts() {
+export function getAllPosts() {
   const request = axios({
     method: 'get',
     url: '/api',
@@ -8,21 +8,21 @@ export function getPosts() {
   });
 
   return {
-    type: 'GET_POSTS',
+    type: 'GET_ALL_POSTS',
     payload: request,
   };
 }
 
-export function getPostsSuccess(posts) {
+export function getAllPostsSuccess(posts) {
   return {
-    type: 'GET_POSTS_SUCCESS',
+    type: 'GET_ALL_POSTS_SUCCESS',
     payload: posts,
   };
 }
 
-export function getPostsFailure(error) {
+export function getAllPostsFailure(error) {
   return {
-    type: 'GET_POSTS_FAILURE',
+    type: 'GET_ALL_POSTS_FAILURE',
     payload: error,
   };
 }
