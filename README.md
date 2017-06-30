@@ -7,5 +7,6 @@ https://medium.com/@rajaraodv/a-guide-for-building-a-react-redux-crud-app-7fe0b8
 ## To run the app locally:
 * checkout master branch
 * run `npm install`
-* run `npm start`
+* run `npm run server`
+* run `npm run client`
 * navigate to http://localhost:3000 in your browser
