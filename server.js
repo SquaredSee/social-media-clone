@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'build')));
 
+
 const testPosts = [
   {
     title: 'Title 1',
@@ -33,14 +34,14 @@ const testPosts = [
   },
 ];
 
-
 const router = express.Router();
 router.get('/posts', (req, res) => {
   res.json(testPosts);
 });
 
-// all of our routes will be prefixed with /api
+// all of our api routes will be prefixed with /api
 app.use('/api', router);
+
 
 const port = process.env.PORT || 7000;
 
