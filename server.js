@@ -14,21 +14,18 @@ const testPosts = [
   {
     title: 'Title 1',
     content: 'This is the content of post 1',
-    authorName: 'foo bar',
     authorUsername: 'foo.bar',
     id: 1,
   },
   {
     title: 'Title 2',
     content: 'This is the content of post 2',
-    authorName: 'MEEEE',
     authorUsername: 'MEEEE',
     id: 2,
   },
   {
     title: 'Title 3',
     content: 'This is the content of post 3',
-    authorName: 'RANDOM DUDE',
     authorUsername: 'IDKLOL',
     id: 3,
   },
@@ -38,6 +35,11 @@ const router = express.Router();
 router.get('/posts', (req, res) => {
   res.json(testPosts);
 });
+
+router.get('/posts/:id', (req, res) => {
+  res.json(testPosts[req.params.id - 1]);
+});
+
 
 // all of our api routes will be prefixed with /api
 app.use('/api', router);
