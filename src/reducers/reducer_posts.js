@@ -19,6 +19,9 @@ export default function (state = INITIAL_STATE, action) {
       const error = action.payload || { message: action.payload.message };
       return { ...state, testData: { foo: '', error: error.message, loading: false } };
     }
+    case 'RESET_ALL_POSTS': {
+      return { ...state, testData: { foo: '', error: null, loading: false } };
+    }
     default: {
       return state;
     }
