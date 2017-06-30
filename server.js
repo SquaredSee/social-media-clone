@@ -15,19 +15,19 @@ const testPosts = [
   {
     title: 'Title 1',
     content: 'This is the content of post 1',
-    authorUsername: 'foo.bar',
+    author: 'foo.bar',
     id: 1,
   },
   {
     title: 'Title 2',
     content: 'This is the content of post 2',
-    authorUsername: 'MEEEE',
+    author: 'MEEEE',
     id: 2,
   },
   {
     title: 'Title 3',
     content: 'This is the content of post 3',
-    authorUsername: 'IDKLOL',
+    author: 'IDKLOL',
     id: 3,
   },
 ];
