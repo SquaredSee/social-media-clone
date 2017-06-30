@@ -26,3 +26,7 @@ export function getAllPostsFailure(error) {
     payload: error,
   };
 }
+
+export function resetAllPosts() {
+  return { type: 'RESET_ALL_POSTS' };
+}
