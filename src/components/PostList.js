@@ -11,7 +11,7 @@ class PostList extends Component {
     return posts.map((post) => {
       return (
         <li className="list-group-item" key={post.id}>
-          <Link style={{ color: 'black' }} to={`posts/${post.id}`}>
+          <Link style={{ color: 'black' }} to={`post/${post.id}`}>
             <h3 className="list-group-item-heading">{post.title}</h3>
           </Link>
         </li>

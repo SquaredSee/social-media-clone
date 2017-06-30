@@ -10,10 +10,9 @@ const App = () => (
     <div id="pagewrapper">
       <Switch>
         <Route exact path="/" render={() => <div>home</div>} />
-        <Route path="/post" component={PostListContainer} />
+        <Route exact path="/post" component={PostListContainer} />
+        <Route path="/post/:id" render={({ match }) => <div>{`Post ID: ${match.params.id}`}</div>} />
         <Route path="*" render={() => <div>404</div>} />
-        {/* <Route path="/post/:id" render={({ match }) => <div>{`Post ID: ${match.params.id}`}</div>} />
-        <Route exact path="*" render={() => <div>404</div>} /> */}
       </Switch>
     </div>
   </div>
